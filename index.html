@@ -13,9 +13,7 @@
   --bg:#f3fbfe;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -180,6 +178,34 @@ nav a{
   line-height:1.5;
 }
 
+.about{
+  background:#fff;
+  border:1px solid #dcecf1;
+  border-radius:30px;
+  padding:45px;
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.about-icon{
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+.about h2{
+  font-size:40px;
+  margin:0 0 15px;
+}
+
+.about p{
+  color:#637a84;
+  font-size:18px;
+  line-height:1.7;
+  margin:0 auto;
+  max-width:700px;
+}
+
 .offer{
   background:var(--navy);
   border-radius:30px;
@@ -255,6 +281,14 @@ footer{
   .hero h1{
     letter-spacing:-3px;
   }
+
+  .about{
+    padding:30px 22px;
+  }
+
+  .about h2{
+    font-size:32px;
+  }
 }
 </style>
 </head>
@@ -269,6 +303,7 @@ footer{
 
   <div>
     <a href="#service">Services</a>
+    <a href="#about">About</a>
     <a href="#price">Prices</a>
     <a href="#contact">Contact</a>
   </div>
@@ -397,6 +432,30 @@ footer{
       </p>
 
     </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section" id="about">
+
+  <div class="about">
+
+    <div class="about-icon">
+      🧽
+    </div>
+
+    <h2>
+      Local & Child-Owned
+    </h2>
+
+    <p>
+      Scrubby is a small, child-owned cleaning business based in
+      Seaforth, Liverpool. We keep things simple, affordable and local,
+      offering straightforward cleaning services for people in our community.
+    </p>
 
   </div>
 
