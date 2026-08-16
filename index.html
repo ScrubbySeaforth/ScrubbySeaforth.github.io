@@ -3,18 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Scrubby | Seaforth Cleaning Services</title>
 
 <style>
+
 :root{
   --navy:#081923;
   --blue:#09a8df;
   --cyan:#6de7ff;
   --bg:#f3fbfe;
+  --light:#e2f9ff;
+  --text:#526b75;
 }
 
 *{
   box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
@@ -79,7 +87,7 @@ nav a{
 .hero p{
   font-size:20px;
   line-height:1.6;
-  color:#526b75;
+  color:var(--text);
   max-width:620px;
 }
 
@@ -108,6 +116,11 @@ nav a{
   font-weight:800;
   padding:16px 24px;
   border-radius:12px;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .visual{
@@ -133,7 +146,7 @@ nav a{
   margin:8px;
 }
 
-.visual .deal-price{
+.deal-price{
   font-size:68px;
   font-weight:900;
   color:var(--cyan);
@@ -159,6 +172,7 @@ nav a{
 .sub{
   color:#607983;
   font-size:18px;
+  line-height:1.6;
 }
 
 .cards{
@@ -230,7 +244,7 @@ nav a{
   border:2px solid #bcecf7;
   border-radius:30px;
   padding:45px;
-  max-width:1000px;
+  max-width:1050px;
   margin:0 auto;
   text-align:center;
 }
@@ -246,10 +260,10 @@ nav a{
 }
 
 .safety-intro{
-  color:#526b75;
+  color:var(--text);
   font-size:18px;
-  line-height:1.6;
-  max-width:750px;
+  line-height:1.7;
+  max-width:800px;
   margin:0 auto 35px;
 }
 
@@ -272,14 +286,54 @@ nav a{
 
 .safety-grid p{
   color:#637a84;
-  line-height:1.5;
+  line-height:1.6;
   margin:10px 0 0;
 }
 
 .safety-footer{
   margin:30px 0 0;
-  color:#526b75;
+  color:var(--text);
   font-weight:700;
+  line-height:1.7;
+}
+
+.email-info{
+  background:#fff;
+  border:1px solid #dcecf1;
+  border-radius:25px;
+  max-width:850px;
+  margin:40px auto 0;
+  padding:35px;
+  text-align:left;
+}
+
+.email-info h3{
+  font-size:28px;
+  margin-top:0;
+}
+
+.email-info p{
+  color:var(--text);
+  line-height:1.6;
+}
+
+.email-list{
+  padding-left:25px;
+}
+
+.email-list li{
+  margin:12px 0;
+  color:#526b75;
+  line-height:1.5;
+}
+
+.email-warning{
+  background:#fff7e6;
+  border:1px solid #f2d18b;
+  border-radius:15px;
+  padding:18px;
+  margin-top:25px;
+  color:#72551d;
   line-height:1.6;
 }
 
@@ -301,6 +355,7 @@ nav a{
   color:#b8ccd3;
   font-size:18px;
   margin:0 auto 25px;
+  line-height:1.6;
 }
 
 .big{
@@ -344,7 +399,7 @@ nav a{
   border-radius:20px;
   padding:25px;
   margin-top:30px;
-  color:#526b75;
+  color:var(--text);
   line-height:1.6;
   text-align:center;
 }
@@ -368,8 +423,8 @@ footer{
   }
 
   nav a{
-    margin-left:9px;
-    font-size:13px;
+    margin-left:8px;
+    font-size:12px;
   }
 
   .hero{
@@ -417,14 +472,21 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .visual .deal-price{
+  .deal-price{
     font-size:55px;
   }
+
+  .email-info{
+    padding:25px 20px;
+  }
 }
+
 </style>
 </head>
 
+
 <body>
+
 
 <nav>
 
@@ -435,11 +497,13 @@ footer{
   <div>
     <a href="#service">Services</a>
     <a href="#about">About</a>
+    <a href="#safety">Safety</a>
     <a href="#price">Prices</a>
     <a href="#contact">Contact</a>
   </div>
 
 </nav>
+
 
 
 <section class="hero">
@@ -517,6 +581,7 @@ footer{
 
   <div class="cards">
 
+
     <div class="card">
 
       <div class="icon">
@@ -537,6 +602,7 @@ footer{
       </div>
 
     </div>
+
 
 
     <div class="card">
@@ -561,6 +627,7 @@ footer{
     </div>
 
 
+
     <div class="card">
 
       <div class="icon">
@@ -573,7 +640,7 @@ footer{
 
       <p>
         We clean your household bins and help get rid
-        of the dirt and grime left behind.
+        of dirt and grime left behind.
       </p>
 
       <div class="card-price">
@@ -581,6 +648,7 @@ footer{
       </div>
 
     </div>
+
 
   </div>
 
@@ -613,7 +681,7 @@ footer{
 
 
 
-<section class="section">
+<section class="section" id="safety">
 
   <div class="safety">
 
@@ -628,13 +696,15 @@ footer{
     <p class="safety-intro">
       Scrubby is a child-owned local business. Because of this,
       the safety and wellbeing of the children involved is our
-      highest priority. All customer enquiries are handled by
-      an adult first, who decides whether a job is safe and
-      appropriate before it is accepted.
+      highest priority. Every customer enquiry is handled by
+      an adult first. The adult responsible for Scrubby reviews
+      the enquiry and decides whether the customer and job are
+      safe and appropriate before anything is arranged.
     </p>
 
 
     <div class="safety-grid">
+
 
       <div>
 
@@ -643,11 +713,12 @@ footer{
         </strong>
 
         <p>
-          We only take jobs within our local area so that the
+          We only accept jobs within our local area so that the
           children are working close to home.
         </p>
 
       </div>
+
 
 
       <div>
@@ -664,20 +735,22 @@ footer{
       </div>
 
 
+
       <div>
 
         <strong>
-          👨‍👧 Adult Contact & Approval
+          👨‍👧 Adult Screening
         </strong>
 
         <p>
-          All customer enquiries go through an adult first.
-          The adult responsible for Scrubby reviews each enquiry
-          and decides whether the customer and job are safe and
-          appropriate before anything is arranged.
+          Every enquiry goes through an adult first. No customer
+          is automatically accepted. The adult responsible for
+          Scrubby decides whether the person, location and job
+          are safe and appropriate.
         </p>
 
       </div>
+
 
 
       <div>
@@ -688,10 +761,12 @@ footer{
 
         <p>
           We do not publish children's names, ages, home address,
-          personal contact details or other private information.
+          personal contact details, school information or private
+          schedules.
         </p>
 
       </div>
+
 
 
       <div>
@@ -702,32 +777,66 @@ footer{
 
         <p>
           Jobs are carried out during daylight hours. We do not
-          arrange late-night or inappropriate appointments.
+          arrange late-night appointments.
         </p>
 
       </div>
+
 
 
       <div>
 
         <strong>
-          ✋ Safety Comes First
+          ✋ Right To Leave
         </strong>
 
         <p>
-          If a situation feels unsafe, uncomfortable or inappropriate,
-          the children can stop the job and leave.
+          If anything feels unsafe, uncomfortable or inappropriate,
+          the job will not continue and the children can leave.
         </p>
 
       </div>
+
+
+
+      <div>
+
+        <strong>
+          📧 Adult-Managed Contact
+        </strong>
+
+        <p>
+          Customer communication is handled through the official
+          Scrubby email and reviewed by an adult before a job
+          is accepted.
+        </p>
+
+      </div>
+
+
+
+      <div>
+
+        <strong>
+          🚷 No Private Contact
+        </strong>
+
+        <p>
+          Customers should not attempt to contact, follow or
+          arrange separate work with the children outside of
+          the official Scrubby booking process.
+        </p>
+
+      </div>
+
 
     </div>
 
 
     <p class="safety-footer">
       Please respect the boundaries of our child-owned business.
-      Customers should only communicate with Scrubby through our
-      official business contact.
+      The safety, privacy and wellbeing of the children involved
+      will always come before accepting a job.
     </p>
 
   </div>
@@ -817,23 +926,93 @@ footer{
   </p>
 
   <p class="sub">
-    Get in touch to book a car wash, window clean, bin clean
-    or the all-in-one Scrubby Deal.
+    All enquiries are reviewed by an adult before any job
+    is accepted.
   </p>
 
-  <p class="sub">
-    All enquiries are reviewed by an adult before any job is accepted.
-  </p>
 
-  <a class="btn"
-     href="mailto:tforan07@gmail.com?subject=Scrubby%20Booking"
-     style="margin-top:20px">
-    Email Scrubby →
-  </a>
+  <div class="email-info">
 
-  <p class="small" style="color:#71858d;margin-top:15px">
-    tforan07@gmail.com
-  </p>
+    <h3>
+      📧 When you email Scrubby
+    </h3>
+
+    <p>
+      To help us check the job and keep everyone safe, please
+      include the following information in your first email:
+    </p>
+
+
+    <ul class="email-list">
+
+      <li>
+        <strong>Full name</strong> — the name of the person booking.
+      </li>
+
+      <li>
+        <strong>Phone number</strong> — a number we can use to
+        discuss the booking if necessary.
+      </li>
+
+      <li>
+        <strong>Full service address</strong> — where the work
+        would take place.
+      </li>
+
+      <li>
+        <strong>Service required</strong> — car wash, windows,
+        bin cleaning or the £20 Scrubby Deal.
+      </li>
+
+      <li>
+        <strong>Vehicle size/type</strong> — if booking a car wash,
+        please tell us what type of vehicle you have.
+      </li>
+
+      <li>
+        <strong>Preferred date and time</strong> — preferably
+        during daylight hours.
+      </li>
+
+      <li>
+        <strong>Any relevant information</strong> — anything we
+        should know about the job or access to the outside area.
+      </li>
+
+    </ul>
+
+
+    <div class="email-warning">
+
+      <strong>
+        Safety screening:
+      </strong>
+
+      All enquiries are reviewed by an adult before a booking
+      is accepted. Providing your details does not guarantee
+      that a booking will be accepted. We may decline a job
+      or request additional information if the situation,
+      location or circumstances do not feel appropriate or safe.
+
+    </div>
+
+
+    <a class="btn"
+       href="mailto:tforan07@gmail.com?subject=Scrubby%20Booking%20Enquiry"
+       style="margin-top:25px">
+
+      Email MR Scrubby →
+
+    </a>
+
+
+    <p class="small" style="color:#71858d;margin-top:15px">
+
+      tforan07@gmail.com
+
+    </p>
+
+  </div>
 
 </section>
 
@@ -850,6 +1029,7 @@ footer{
   </span>
 
 </footer>
+
 
 </body>
 </html>
