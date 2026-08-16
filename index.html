@@ -13,7 +13,9 @@
   --bg:#f3fbfe;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
@@ -131,6 +133,15 @@ nav a{
   margin:8px;
 }
 
+.visual .deal-price{
+  font-size:68px;
+  font-weight:900;
+  color:var(--cyan);
+  text-align:center;
+  width:100%;
+  margin-top:15px;
+}
+
 .section{
   padding:75px 7%;
 }
@@ -214,6 +225,64 @@ nav a{
   max-width:700px;
 }
 
+.safety{
+  background:#fff;
+  border:2px solid #bcecf7;
+  border-radius:30px;
+  padding:45px;
+  max-width:1000px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.safety-icon{
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+.safety h2{
+  font-size:40px;
+  margin:0 0 15px;
+}
+
+.safety-intro{
+  color:#526b75;
+  font-size:18px;
+  line-height:1.6;
+  max-width:750px;
+  margin:0 auto 35px;
+}
+
+.safety-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  text-align:left;
+}
+
+.safety-grid div{
+  background:#f3fbfe;
+  border-radius:18px;
+  padding:22px;
+}
+
+.safety-grid strong{
+  font-size:18px;
+}
+
+.safety-grid p{
+  color:#637a84;
+  line-height:1.5;
+  margin:10px 0 0;
+}
+
+.safety-footer{
+  margin:30px 0 0;
+  color:#526b75;
+  font-weight:700;
+  line-height:1.6;
+}
+
 .offer{
   background:var(--navy);
   border-radius:30px;
@@ -238,6 +307,9 @@ nav a{
   font-size:78px;
   font-weight:900;
   color:var(--cyan);
+  text-align:center;
+  width:100%;
+  display:block;
 }
 
 .saving{
@@ -291,9 +363,13 @@ footer{
 
 @media(max-width:800px){
 
+  nav{
+    padding:0 5%;
+  }
+
   nav a{
-    margin-left:10px;
-    font-size:14px;
+    margin-left:9px;
+    font-size:13px;
   }
 
   .hero{
@@ -327,6 +403,22 @@ footer{
 
   .offer h2{
     font-size:34px;
+  }
+
+  .safety{
+    padding:30px 22px;
+  }
+
+  .safety h2{
+    font-size:32px;
+  }
+
+  .safety-grid{
+    grid-template-columns:1fr;
+  }
+
+  .visual .deal-price{
+    font-size:55px;
   }
 }
 </style>
@@ -398,7 +490,7 @@ footer{
       Car + windows + bins
     </p>
 
-    <div class="big">
+    <div class="deal-price">
       £20
     </div>
 
@@ -510,8 +602,128 @@ footer{
 
     <p>
       Scrubby is a small, child-owned cleaning business based in
-      Seaforth, Liverpool. We keep things simple, affordable and local,
-      offering straightforward cleaning services for people in our community.
+      Seaforth, Liverpool. We provide simple, affordable services
+      within our local community while keeping the safety and privacy
+      of the children involved as our highest priority.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<section class="section">
+
+  <div class="safety">
+
+    <div class="safety-icon">
+      🛡️
+    </div>
+
+    <h2>
+      Child Safety Comes First
+    </h2>
+
+    <p class="safety-intro">
+      Scrubby is a child-owned local business. Because of this,
+      the safety and wellbeing of the children involved is our
+      highest priority.
+    </p>
+
+
+    <div class="safety-grid">
+
+      <div>
+
+        <strong>
+          📍 Local Jobs Only
+        </strong>
+
+        <p>
+          We only take jobs within our local area so that the
+          children are working close to home.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          🚫 No Home Entry
+        </strong>
+
+        <p>
+          Scrubby services are carried out outside. Children
+          will never be expected to enter a customer's home.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          📧 Official Contact Only
+        </strong>
+
+        <p>
+          All bookings and customer communication should go
+          through the official Scrubby business email.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          🔒 Privacy Protected
+        </strong>
+
+        <p>
+          We do not publish children's names, ages, home address,
+          personal contact details or other private information.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          ☀️ Daylight Working
+        </strong>
+
+        <p>
+          Jobs are carried out during daylight hours. We do not
+          arrange late-night or inappropriate appointments.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          ✋ Safety Comes First
+        </strong>
+
+        <p>
+          If a situation feels unsafe, uncomfortable or inappropriate,
+          the children can stop the job and leave.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <p class="safety-footer">
+      Please respect the boundaries of our child-owned business.
+      Customers should only communicate with Scrubby through our
+      official business contact.
     </p>
 
   </div>
@@ -529,9 +741,10 @@ footer{
     </h2>
 
     <p>
-      Get your car, ground-floor house windows and household bin cleaned
-      all in one visit.
+      Get your car, ground-floor house windows and household bin
+      cleaned all in one visit.
     </p>
+
 
     <div class="deal-items">
 
@@ -549,22 +762,39 @@ footer{
 
     </div>
 
+
     <div class="big">
       £20
     </div>
+
 
     <div class="saving">
       SAVE £2.50
     </div>
 
+
     <p>
       One flat price for the full Scrubby treatment.
     </p>
 
-    <a class="btn"
-       href="#contact">
+
+    <a class="btn" href="#contact">
       Get the Scrubby Deal →
     </a>
+
+  </div>
+
+
+  <div class="note">
+
+    <strong>
+      Simple pricing. No hidden extras.
+    </strong>
+
+    <br>
+
+    Car wash: £10 • Ground-floor windows: £5 • Bin cleaning: £7.50
+    • All-in-one Scrubby Deal: £20
 
   </div>
 
